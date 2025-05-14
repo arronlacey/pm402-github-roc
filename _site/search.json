@@ -1,0 +1,23 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "ROC Humvar",
+    "section": "",
+    "text": "Code\ndf &lt;- read.csv(\"data/humvar.csv\")\ndf$labels &lt;- as.factor(df$labels)\ndim(df)\n\n\n[1] 38684    47"
+  },
+  {
+    "objectID": "index.html#load-in-humvar-dataset",
+    "href": "index.html#load-in-humvar-dataset",
+    "title": "ROC Humvar",
+    "section": "",
+    "text": "Code\ndf &lt;- read.csv(\"data/humvar.csv\")\ndf$labels &lt;- as.factor(df$labels)\ndim(df)\n\n\n[1] 38684    47"
+  },
+  {
+    "objectID": "index.html#train-random-forest",
+    "href": "index.html#train-random-forest",
+    "title": "ROC Humvar",
+    "section": "Train Random Forest",
+    "text": "Train Random Forest\n\n\nCode\ndfTrain &lt;- df[sample(1000),]\ndfTest &lt;- df[sample(1000),]\n\nrf &lt;- randomForest(labels ~.,data=dfTrain)\nrf\n\n\n\nCall:\n randomForest(formula = labels ~ ., data = dfTrain) \n               Type of random forest: classification\n                     Number of trees: 500\nNo. of variables tried at each split: 6\n\n        OOB estimate of  error rate: 8.8%\nConfusion matrix:\n           Benign Pathogenic class.error\nBenign        598         33  0.05229794\nPathogenic     55        314  0.14905149"
+  }
+]
